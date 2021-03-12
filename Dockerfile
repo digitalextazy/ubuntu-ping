@@ -2,7 +2,7 @@ FROM digitalextazy/ubuntuping
 
 MAINTAINER tom.k <t.k@f.ua>
 
-ONBUILD RUN service nginx start
+ONBUILD CMD [“nginx”, “-g”, “daemon on;”]
 
 ONBUILD COPY index.html /var/www/html
 
